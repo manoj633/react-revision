@@ -8,7 +8,12 @@ function ParentComponent() {
   function handleClick() {
     alert("Button clicked");
   }
-  return <ChildComponent message={"Hello"} onClick={handleClick} user={user} />;
+  return (
+    <ChildComponent message={"Hello"} onClick={handleClick} user={user}>
+      <p>Hello</p>
+      <p>World</p>
+    </ChildComponent>
+  );
 }
 
 export default ParentComponent;
