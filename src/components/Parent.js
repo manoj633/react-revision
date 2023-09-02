@@ -1,7 +1,10 @@
 import React from "react";
 import ChildComponent from "./Child";
 function ParentComponent() {
-  return <ChildComponent message={"Hello"} />;
+  function handleClick() {
+    alert("Button clicked");
+  }
+  return <ChildComponent message={"Hello"} onClick={handleClick} />;
 }
 
 export default ParentComponent;
