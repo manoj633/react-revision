@@ -3,6 +3,7 @@ import DefaultProps from "./components/propsBasics/DefaultProps";
 import CounterComponent from "./components/useState hook/Counter";
 import DataFetching from "./components/useEffect hook/DataFetching";
 import BasicContextProvider from "./components/contextAPI/BasicContextExample/BasicContextProvider";
+import UserContextProvider from "./components/contextAPI/ObjectContextExample/UserContextProvider";
 
 function App() {
   return (
@@ -17,7 +18,10 @@ function App() {
       {/* <DataFetching /> */}
 
       {/* basic context API example */}
-      <BasicContextProvider />
+      {/* <BasicContextProvider /> */}
+
+      {/* Bit advanced context example */}
+      <UserContextProvider />
     </div>
   );
 }
