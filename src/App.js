@@ -1,4 +1,4 @@
-import ParentComponent from "./components/Parent";
+import ParentComponent from "./components/propsBasics/Parent";
 
 function App() {
   return (

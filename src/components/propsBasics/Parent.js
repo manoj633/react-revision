@@ -5,9 +5,11 @@ function ParentComponent() {
     name: "John Doe",
     age: 30,
   };
+
   function handleClick() {
-    alert("Button clicked");
+    alert("Button clicked in child, function executed in parent");
   }
+
   return (
     <ChildComponent message={"Hello"} onClick={handleClick} user={user}>
       <p>Hello</p>
