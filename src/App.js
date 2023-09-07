@@ -4,6 +4,7 @@ import CounterComponent from "./components/useState hook/Counter";
 import DataFetching from "./components/useEffect hook/DataFetching";
 import BasicContextProvider from "./components/contextAPI/BasicContextExample/BasicContextProvider";
 import UserContextProvider from "./components/contextAPI/ObjectContextExample/UserContextProvider";
+import Modal from "./components/portal/Modal";
 
 function App() {
   return (
@@ -21,7 +22,10 @@ function App() {
       {/* <BasicContextProvider /> */}
 
       {/* Bit advanced context example */}
-      <UserContextProvider />
+      {/* <UserContextProvider /> */}
+
+      {/* Portal */}
+      <Modal></Modal>
     </div>
   );
 }
