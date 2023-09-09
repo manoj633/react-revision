@@ -25,7 +25,9 @@ function App() {
       {/* <UserContextProvider /> */}
 
       {/* Portal */}
-      <Modal></Modal>
+      <Modal>
+        <div style={{ backgroundColor: "#ff0000" }}>Namaste</div>
+      </Modal>
     </div>
   );
 }
