@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import ParentComponent from "./components/propsBasics/Parent";
 import DefaultProps from "./components/propsBasics/DefaultProps";
 import CounterComponent from "./components/useState hook/Counter";
@@ -5,9 +6,11 @@ import DataFetching from "./components/useEffect hook/DataFetching";
 import BasicContextProvider from "./components/contextAPI/BasicContextExample/BasicContextProvider";
 import UserContextProvider from "./components/contextAPI/ObjectContextExample/UserContextProvider";
 import Modal from "./components/portal/Modal";
-import { useRef } from "react";
-// import ForwardRefChild from "./components/forwardRefs/ForwardRefChild";
+
+import ForwardRefChild from "./components/forwardRefs/ForwardRefChild";
 import ForwardRefSecondChild from "./components/forwardRefs/ForwardRefSecondChild";
+
+import Counter from "./components/useRef Example/Counter";
 
 function App() {
   const inputRef = useRef(null);
@@ -49,7 +52,10 @@ function App() {
       {/* <ForwardRefChild ref={inputRef} clickHandler={clickHandler} /> */}
 
       {/* Forward Ref Second exmaple */}
-      <ForwardRefSecondChild ref={childRef} clickHandler={secondClickHandler} />
+      {/* <ForwardRefSecondChild ref={childRef} clickHandler={secondClickHandler} /> */}
+
+      {/* useRef Exmaple */}
+      <Counter />
     </div>
   );
 }
