@@ -11,6 +11,7 @@ import ForwardRefChild from "./components/forwardRefs/ForwardRefChild";
 import ForwardRefSecondChild from "./components/forwardRefs/ForwardRefSecondChild";
 
 import Counter from "./components/useRef Example/Counter";
+import Parent from "./components/child to parent prop passing/Parent";
 
 function App() {
   const inputRef = useRef(null);
@@ -55,7 +56,10 @@ function App() {
       {/* <ForwardRefSecondChild ref={childRef} clickHandler={secondClickHandler} /> */}
 
       {/* useRef Exmaple */}
-      <Counter />
+      {/* <Counter /> */}
+
+      {/* Pass data from child to Parent */}
+      <Parent />
     </div>
   );
 }
