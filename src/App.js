@@ -14,6 +14,7 @@ import Counter from "./components/useRef Example/Counter";
 import Parent from "./components/child to parent prop passing/Parent";
 import ListsAndKeys from "./components/Lists and Keys/ListsAndKeys";
 import ConditionalRendering from "./components/conditional rendering/Conditionalrendering";
+import FunctionalComponentLifecycle from "./components/Lifecycle Demo/FunctionalComponentLifecycle";
 
 function App() {
   const inputRef = useRef(null);
@@ -67,7 +68,10 @@ function App() {
       {/* <ListsAndKeys /> */}
 
       {/* Conditional rendering */}
-      <ConditionalRendering condition={true} />
+      {/* <ConditionalRendering condition={true} /> */}
+
+      {/* Functional Lifecycle Example */}
+      <FunctionalComponentLifecycle />
     </div>
   );
 }
