@@ -5,8 +5,16 @@ import DataFetching from "./components/useEffect hook/DataFetching";
 import BasicContextProvider from "./components/contextAPI/BasicContextExample/BasicContextProvider";
 import UserContextProvider from "./components/contextAPI/ObjectContextExample/UserContextProvider";
 import Modal from "./components/portal/Modal";
+import { useRef } from "react";
+import ForwardRefChild from "./components/forwardRefs/ForwardRefChild";
 
 function App() {
+  const inputRef = useRef(null);
+
+  function clickHandler() {
+    inputRef.current.focus();
+  }
+
   return (
     <div className="App">
       {/* <ParentComponent /> */}
@@ -25,9 +33,12 @@ function App() {
       {/* <UserContextProvider /> */}
 
       {/* Portal */}
-      <Modal>
+      {/* <Modal>
         <div style={{ backgroundColor: "#ff0000" }}>Namaste</div>
-      </Modal>
+      </Modal> */}
+
+      {/* Forward Refs */}
+      <ForwardRefChild ref={inputRef} clickHandler={clickHandler} />
     </div>
   );
 }
