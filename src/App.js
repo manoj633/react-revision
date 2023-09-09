@@ -12,6 +12,7 @@ import ForwardRefSecondChild from "./components/forwardRefs/ForwardRefSecondChil
 
 import Counter from "./components/useRef Example/Counter";
 import Parent from "./components/child to parent prop passing/Parent";
+import ListsAndKeys from "./components/Lists and Keys/ListsAndKeys";
 
 function App() {
   const inputRef = useRef(null);
@@ -59,7 +60,10 @@ function App() {
       {/* <Counter /> */}
 
       {/* Pass data from child to Parent */}
-      <Parent />
+      {/* <Parent /> */}
+
+      {/* List and Keys */}
+      <ListsAndKeys />
     </div>
   );
 }
