@@ -6,13 +6,21 @@ import BasicContextProvider from "./components/contextAPI/BasicContextExample/Ba
 import UserContextProvider from "./components/contextAPI/ObjectContextExample/UserContextProvider";
 import Modal from "./components/portal/Modal";
 import { useRef } from "react";
-import ForwardRefChild from "./components/forwardRefs/ForwardRefChild";
+// import ForwardRefChild from "./components/forwardRefs/ForwardRefChild";
+import ForwardRefSecondChild from "./components/forwardRefs/ForwardRefSecondChild";
 
 function App() {
   const inputRef = useRef(null);
+  const childRef = useRef(null);
 
   function clickHandler() {
     inputRef.current.focus();
+  }
+
+  function secondClickHandler() {
+    if (childRef.current) {
+      childRef.current.style.backgroundColor = "blue";
+    }
   }
 
   return (
@@ -38,7 +46,10 @@ function App() {
       </Modal> */}
 
       {/* Forward Refs */}
-      <ForwardRefChild ref={inputRef} clickHandler={clickHandler} />
+      {/* <ForwardRefChild ref={inputRef} clickHandler={clickHandler} /> */}
+
+      {/* Forward Ref Second exmaple */}
+      <ForwardRefSecondChild ref={childRef} clickHandler={secondClickHandler} />
     </div>
   );
 }
