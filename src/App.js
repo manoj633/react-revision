@@ -15,6 +15,7 @@ import Parent from "./components/child to parent prop passing/Parent";
 import ListsAndKeys from "./components/Lists and Keys/ListsAndKeys";
 import ConditionalRendering from "./components/conditional rendering/Conditionalrendering";
 import FunctionalComponentLifecycle from "./components/Lifecycle Demo/FunctionalComponentLifecycle";
+import ControlledComponent from "./components/controlled component/ControlledComponent";
 
 function App() {
   const inputRef = useRef(null);
@@ -71,7 +72,10 @@ function App() {
       {/* <ConditionalRendering condition={true} /> */}
 
       {/* Functional Lifecycle Example */}
-      <FunctionalComponentLifecycle />
+      {/* <FunctionalComponentLifecycle /> */}
+
+      {/* Controlled component */}
+      <ControlledComponent />
     </div>
   );
 }
