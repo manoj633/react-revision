@@ -17,6 +17,7 @@ import ConditionalRendering from "./components/conditional rendering/Conditional
 import FunctionalComponentLifecycle from "./components/Lifecycle Demo/FunctionalComponentLifecycle";
 import ControlledComponent from "./components/controlled component/ControlledComponent";
 import UncontrolledComponent from "./components/uncontrolled component/UncontrolledComponent";
+import AccessValues from "./components/Forms/Basic Form/AccessValues";
 
 function App() {
   const inputRef = useRef(null);
@@ -79,7 +80,10 @@ function App() {
       {/* <ControlledComponent /> */}
 
       {/* Uncontrolled component */}
-      <UncontrolledComponent />
+      {/* <UncontrolledComponent /> */}
+
+      {/* Form Basics */}
+      <AccessValues />
     </div>
   );
 }
