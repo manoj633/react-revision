@@ -18,6 +18,7 @@ import FunctionalComponentLifecycle from "./components/Lifecycle Demo/Functional
 import ControlledComponent from "./components/controlled component/ControlledComponent";
 import UncontrolledComponent from "./components/uncontrolled component/UncontrolledComponent";
 import AccessValues from "./components/Forms/Basic Form/AccessValues";
+import ValidateInput from "./components/Forms/validation/ValidateInput";
 
 function App() {
   const inputRef = useRef(null);
@@ -83,7 +84,10 @@ function App() {
       {/* <UncontrolledComponent /> */}
 
       {/* Form Basics */}
-      <AccessValues />
+      {/* <AccessValues /> */}
+
+      {/* Validating Input */}
+      <ValidateInput />
     </div>
   );
 }
