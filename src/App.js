@@ -19,6 +19,7 @@ import ControlledComponent from "./components/controlled component/ControlledCom
 import UncontrolledComponent from "./components/uncontrolled component/UncontrolledComponent";
 import AccessValues from "./components/Forms/Basic Form/AccessValues";
 import ValidateInput from "./components/Forms/validation/ValidateInput";
+import AdvancedValidation from "./components/Forms/validation/AdvancedValidation";
 
 function App() {
   const inputRef = useRef(null);
@@ -87,7 +88,8 @@ function App() {
       {/* <AccessValues /> */}
 
       {/* Validating Input */}
-      <ValidateInput />
+      {/* <ValidateInput /> */}
+      <AdvancedValidation />
     </div>
   );
 }
