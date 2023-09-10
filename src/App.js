@@ -16,6 +16,7 @@ import ListsAndKeys from "./components/Lists and Keys/ListsAndKeys";
 import ConditionalRendering from "./components/conditional rendering/Conditionalrendering";
 import FunctionalComponentLifecycle from "./components/Lifecycle Demo/FunctionalComponentLifecycle";
 import ControlledComponent from "./components/controlled component/ControlledComponent";
+import UncontrolledComponent from "./components/uncontrolled component/UncontrolledComponent";
 
 function App() {
   const inputRef = useRef(null);
@@ -75,7 +76,10 @@ function App() {
       {/* <FunctionalComponentLifecycle /> */}
 
       {/* Controlled component */}
-      <ControlledComponent />
+      {/* <ControlledComponent /> */}
+
+      {/* Uncontrolled component */}
+      <UncontrolledComponent />
     </div>
   );
 }
