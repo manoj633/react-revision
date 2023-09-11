@@ -20,6 +20,7 @@ import UncontrolledComponent from "./components/uncontrolled component/Uncontrol
 import AccessValues from "./components/Forms/Basic Form/AccessValues";
 import ValidateInput from "./components/Forms/validation/ValidateInput";
 import AdvancedValidation from "./components/Forms/validation/AdvancedValidation";
+import { LoginForm } from "./components/Forms/form hook/LoginForm";
 
 function App() {
   const inputRef = useRef(null);
@@ -89,7 +90,10 @@ function App() {
 
       {/* Validating Input */}
       {/* <ValidateInput /> */}
-      <AdvancedValidation />
+      {/* <AdvancedValidation /> */}
+
+      {/* React Hook Form validation */}
+      <LoginForm />
     </div>
   );
 }
