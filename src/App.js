@@ -21,6 +21,7 @@ import AccessValues from "./components/Forms/Basic Form/AccessValues";
 import ValidateInput from "./components/Forms/validation/ValidateInput";
 import AdvancedValidation from "./components/Forms/validation/AdvancedValidation";
 import { LoginForm } from "./components/Forms/form hook/LoginForm";
+import FormSubmission from "./components/Forms/form hook/FormSubmission";
 
 function App() {
   const inputRef = useRef(null);
@@ -93,7 +94,8 @@ function App() {
       {/* <AdvancedValidation /> */}
 
       {/* React Hook Form validation */}
-      <LoginForm />
+      {/* <LoginForm /> */}
+      <FormSubmission />
     </div>
   );
 }
