@@ -25,6 +25,7 @@ import FormSubmission from "./components/Forms/form hook/FormSubmission";
 import { FormValidation } from "./components/Forms/form hook/FormValidation";
 import { CustomFormValidation } from "./components/Forms/form hook/CustomFormValidation";
 import { ErrorVisualFeedback } from "./components/Forms/form hook/ErrorVisualFeedback";
+import { DefaultValues } from "./components/Forms/form hook/DefaultValues";
 
 function App() {
   const inputRef = useRef(null);
@@ -101,7 +102,8 @@ function App() {
       {/* <FormSubmission /> */}
       {/* <FormValidation /> */}
       {/* <CustomFormValidation /> */}
-      <ErrorVisualFeedback />
+      {/* <ErrorVisualFeedback /> */}
+      <DefaultValues />
     </div>
   );
 }
