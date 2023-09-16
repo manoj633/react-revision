@@ -41,6 +41,7 @@ import { ResetForm } from "./components/Forms/form hook/ResetForm";
 import { Route, Routes } from "react-router-dom";
 import { Home } from "./components/Router/Home";
 import { About } from "./components/Router/About";
+import { NavBar } from "./components/Router/NavBar";
 
 function App() {
   const inputRef = useRef(null);
@@ -134,6 +135,7 @@ function App() {
       {/* <ResetForm /> */}
 
       {/* React Router */}
+      <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
