@@ -38,6 +38,9 @@ import { HandleFormSubmissionError } from "./components/Forms/form hook/HandleFo
 import { DisableFormSubmission } from "./components/Forms/form hook/DisableFormSubmission";
 import { FormSubmissionStates } from "./components/Forms/form hook/FormSubmissionStates";
 import { ResetForm } from "./components/Forms/form hook/ResetForm";
+import { Route, Routes } from "react-router-dom";
+import { Home } from "./components/Router/Home";
+import { About } from "./components/Router/About";
 
 function App() {
   const inputRef = useRef(null);
@@ -128,7 +131,13 @@ function App() {
       {/* <HandleFormSubmissionError /> */}
       {/* <DisableFormSubmission /> */}
       {/* <FormSubmissionStates /> */}
-      <ResetForm />
+      {/* <ResetForm /> */}
+
+      {/* React Router */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="about" element={<About />} />
+      </Routes>
     </div>
   );
 }
