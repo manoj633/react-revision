@@ -44,6 +44,9 @@ import { About } from "./components/Router/About";
 import { NavBar } from "./components/Router/NavBar";
 import { OrderSummary } from "./components/Router/OrderSummary";
 import { NoMatch } from "./components/Router/NoMatch";
+import { Products } from "./components/Router/Products";
+import { FeaturedProduct } from "./components/Router/FeaturedProduct";
+import { NewProduct } from "./components/Router/NewProduct";
 
 function App() {
   const inputRef = useRef(null);
@@ -142,6 +145,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="order-summary" element={<OrderSummary />} />
+        <Route path="products" element={<Products />}>
+          <Route path="featured" element={<FeaturedProduct />} />
+          <Route path="new" element={<NewProduct />} />
+        </Route>
         <Route path="*" element={<NoMatch />} />
       </Routes>
     </div>
