@@ -36,6 +36,7 @@ import { TouchedAndDirtyFields } from "./components/Forms/form hook/TouchedAndDi
 import { DisabledFields } from "./components/Forms/form hook/DisabledFields";
 import { HandleFormSubmissionError } from "./components/Forms/form hook/HandleFormSubmissionError";
 import { DisableFormSubmission } from "./components/Forms/form hook/DisableFormSubmission";
+import { FormSubmissionStates } from "./components/Forms/form hook/FormSubmissionStates";
 
 function App() {
   const inputRef = useRef(null);
@@ -124,7 +125,8 @@ function App() {
       {/* <TouchedAndDirtyFields /> */}
       {/* <DisabledFields /> */}
       {/* <HandleFormSubmissionError /> */}
-      <DisableFormSubmission />
+      {/* <DisableFormSubmission /> */}
+      <FormSubmissionStates />
     </div>
   );
 }
