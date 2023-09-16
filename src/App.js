@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import React, { useRef } from "react";
 import ParentComponent from "./components/propsBasics/Parent";
 import DefaultProps from "./components/propsBasics/DefaultProps";
 import CounterComponent from "./components/useState hook/Counter";
@@ -38,6 +38,20 @@ import { HandleFormSubmissionError } from "./components/Forms/form hook/HandleFo
 import { DisableFormSubmission } from "./components/Forms/form hook/DisableFormSubmission";
 import { FormSubmissionStates } from "./components/Forms/form hook/FormSubmissionStates";
 import { ResetForm } from "./components/Forms/form hook/ResetForm";
+import { Route, Routes } from "react-router-dom";
+import { Home } from "./components/Router/Home";
+// import { About } from "./components/Router/About";
+import { NavBar } from "./components/Router/NavBar";
+import { OrderSummary } from "./components/Router/OrderSummary";
+import { NoMatch } from "./components/Router/NoMatch";
+import { Products } from "./components/Router/Products";
+import { FeaturedProduct } from "./components/Router/FeaturedProduct";
+import { NewProduct } from "./components/Router/NewProduct";
+import { Users } from "./components/Router/Users";
+import { UserDetails } from "./components/Router/UserDetails";
+import { Admin } from "./components/Router/Admin";
+
+const LazyAbout = React.lazy(() => import("./components/Router/About"));
 
 function App() {
   const inputRef = useRef(null);
@@ -128,7 +142,32 @@ function App() {
       {/* <HandleFormSubmissionError /> */}
       {/* <DisableFormSubmission /> */}
       {/* <FormSubmissionStates /> */}
-      <ResetForm />
+      {/* <ResetForm /> */}
+
+      {/* React Router */}
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route
+          path="about"
+          element={
+            <React.Suspense fallback="...Loading">
+              <LazyAbout />
+            </React.Suspense>
+          }
+        />
+        <Route path="order-summary" element={<OrderSummary />} />
+        <Route path="products" element={<Products />}>
+          <Route index element={<FeaturedProduct />} />
+          <Route path="featured" element={<FeaturedProduct />} />
+          <Route path="new" element={<NewProduct />} />
+        </Route>
+        <Route path="users" element={<Users />}>
+          <Route path=":userId" element={<UserDetails />} />
+          <Route path="admin" element={<Admin />} />
+        </Route>
+        <Route path="*" element={<NoMatch />} />
+      </Routes>
     </div>
   );
 }
