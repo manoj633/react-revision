@@ -30,6 +30,7 @@ import { NestedObject } from "./components/Forms/form hook/NestedObject";
 import { DynamicFields } from "./components/Forms/form hook/field array hook/DynamicFields";
 import { NumbersAndDates } from "./components/Forms/form hook/NumbersAndDates";
 import { WatchValue } from "./components/Forms/form hook/WatchValue";
+import { GetFieldValue } from "./components/Forms/form hook/GetFieldValue";
 
 function App() {
   const inputRef = useRef(null);
@@ -112,7 +113,8 @@ function App() {
       {/* <DynamicFields /> */}
 
       {/* <NumbersAndDates /> */}
-      <WatchValue />
+      {/* <WatchValue /> */}
+      <GetFieldValue />
     </div>
   );
 }
