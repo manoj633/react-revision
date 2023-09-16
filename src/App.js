@@ -42,6 +42,7 @@ import { Route, Routes } from "react-router-dom";
 import { Home } from "./components/Router/Home";
 import { About } from "./components/Router/About";
 import { NavBar } from "./components/Router/NavBar";
+import { OrderSummary } from "./components/Router/OrderSummary";
 
 function App() {
   const inputRef = useRef(null);
@@ -139,6 +140,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
+        <Route path="order-summary" element={<OrderSummary />} />
       </Routes>
     </div>
   );
