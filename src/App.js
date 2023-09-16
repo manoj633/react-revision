@@ -28,6 +28,7 @@ import { ErrorVisualFeedback } from "./components/Forms/form hook/ErrorVisualFee
 import { DefaultValues } from "./components/Forms/form hook/DefaultValues";
 import { NestedObject } from "./components/Forms/form hook/NestedObject";
 import { DynamicFields } from "./components/Forms/form hook/field array hook/DynamicFields";
+import { NumbersAndDates } from "./components/Forms/form hook/NumbersAndDates";
 
 function App() {
   const inputRef = useRef(null);
@@ -108,6 +109,8 @@ function App() {
       {/* <DefaultValues /> */}
       {/* <NestedObject /> */}
       {/* <DynamicFields /> */}
+
+      <NumbersAndDates />
     </div>
   );
 }
