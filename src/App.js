@@ -37,6 +37,7 @@ import { DisabledFields } from "./components/Forms/form hook/DisabledFields";
 import { HandleFormSubmissionError } from "./components/Forms/form hook/HandleFormSubmissionError";
 import { DisableFormSubmission } from "./components/Forms/form hook/DisableFormSubmission";
 import { FormSubmissionStates } from "./components/Forms/form hook/FormSubmissionStates";
+import { ResetForm } from "./components/Forms/form hook/ResetForm";
 
 function App() {
   const inputRef = useRef(null);
@@ -126,7 +127,8 @@ function App() {
       {/* <DisabledFields /> */}
       {/* <HandleFormSubmissionError /> */}
       {/* <DisableFormSubmission /> */}
-      <FormSubmissionStates />
+      {/* <FormSubmissionStates /> */}
+      <ResetForm />
     </div>
   );
 }
