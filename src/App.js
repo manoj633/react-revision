@@ -47,6 +47,9 @@ import { NoMatch } from "./components/Router/NoMatch";
 import { Products } from "./components/Router/Products";
 import { FeaturedProduct } from "./components/Router/FeaturedProduct";
 import { NewProduct } from "./components/Router/NewProduct";
+import { Users } from "./components/Router/Users";
+import { UserDetails } from "./components/Router/UserDetails";
+import { Admin } from "./components/Router/Admin";
 
 function App() {
   const inputRef = useRef(null);
@@ -149,6 +152,10 @@ function App() {
           <Route index element={<FeaturedProduct />} />
           <Route path="featured" element={<FeaturedProduct />} />
           <Route path="new" element={<NewProduct />} />
+        </Route>
+        <Route path="users" element={<Users />}>
+          <Route path=":userId" element={<UserDetails />} />
+          <Route path="admin" element={<Admin />} />
         </Route>
         <Route path="*" element={<NoMatch />} />
       </Routes>
