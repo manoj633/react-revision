@@ -31,6 +31,7 @@ import { DynamicFields } from "./components/Forms/form hook/field array hook/Dyn
 import { NumbersAndDates } from "./components/Forms/form hook/NumbersAndDates";
 import { WatchValue } from "./components/Forms/form hook/WatchValue";
 import { GetFieldValue } from "./components/Forms/form hook/GetFieldValue";
+import { SetFieldValue } from "./components/Forms/form hook/SetFieldValue";
 
 function App() {
   const inputRef = useRef(null);
@@ -114,7 +115,8 @@ function App() {
 
       {/* <NumbersAndDates /> */}
       {/* <WatchValue /> */}
-      <GetFieldValue />
+      {/* <GetFieldValue /> */}
+      <SetFieldValue />
     </div>
   );
 }
