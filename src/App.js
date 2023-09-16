@@ -33,6 +33,7 @@ import { WatchValue } from "./components/Forms/form hook/WatchValue";
 import { GetFieldValue } from "./components/Forms/form hook/GetFieldValue";
 import { SetFieldValue } from "./components/Forms/form hook/SetFieldValue";
 import { TouchedAndDirtyFields } from "./components/Forms/form hook/TouchedAndDirtyFields";
+import { DisabledFields } from "./components/Forms/form hook/DisabledFields";
 
 function App() {
   const inputRef = useRef(null);
@@ -118,7 +119,8 @@ function App() {
       {/* <WatchValue /> */}
       {/* <GetFieldValue /> */}
       {/* <SetFieldValue /> */}
-      <TouchedAndDirtyFields />
+      {/* <TouchedAndDirtyFields /> */}
+      <DisabledFields />
     </div>
   );
 }
