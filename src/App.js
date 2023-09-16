@@ -27,6 +27,17 @@ import { CustomFormValidation } from "./components/Forms/form hook/CustomFormVal
 import { ErrorVisualFeedback } from "./components/Forms/form hook/ErrorVisualFeedback";
 import { DefaultValues } from "./components/Forms/form hook/DefaultValues";
 import { NestedObject } from "./components/Forms/form hook/NestedObject";
+import { DynamicFields } from "./components/Forms/form hook/field array hook/DynamicFields";
+import { NumbersAndDates } from "./components/Forms/form hook/NumbersAndDates";
+import { WatchValue } from "./components/Forms/form hook/WatchValue";
+import { GetFieldValue } from "./components/Forms/form hook/GetFieldValue";
+import { SetFieldValue } from "./components/Forms/form hook/SetFieldValue";
+import { TouchedAndDirtyFields } from "./components/Forms/form hook/TouchedAndDirtyFields";
+import { DisabledFields } from "./components/Forms/form hook/DisabledFields";
+import { HandleFormSubmissionError } from "./components/Forms/form hook/HandleFormSubmissionError";
+import { DisableFormSubmission } from "./components/Forms/form hook/DisableFormSubmission";
+import { FormSubmissionStates } from "./components/Forms/form hook/FormSubmissionStates";
+import { ResetForm } from "./components/Forms/form hook/ResetForm";
 
 function App() {
   const inputRef = useRef(null);
@@ -106,6 +117,18 @@ function App() {
       {/* <ErrorVisualFeedback /> */}
       {/* <DefaultValues /> */}
       {/* <NestedObject /> */}
+      {/* <DynamicFields /> */}
+
+      {/* <NumbersAndDates /> */}
+      {/* <WatchValue /> */}
+      {/* <GetFieldValue /> */}
+      {/* <SetFieldValue /> */}
+      {/* <TouchedAndDirtyFields /> */}
+      {/* <DisabledFields /> */}
+      {/* <HandleFormSubmissionError /> */}
+      {/* <DisableFormSubmission /> */}
+      {/* <FormSubmissionStates /> */}
+      <ResetForm />
     </div>
   );
 }
