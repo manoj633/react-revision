@@ -43,6 +43,7 @@ import { Home } from "./components/Router/Home";
 import { About } from "./components/Router/About";
 import { NavBar } from "./components/Router/NavBar";
 import { OrderSummary } from "./components/Router/OrderSummary";
+import { NoMatch } from "./components/Router/NoMatch";
 
 function App() {
   const inputRef = useRef(null);
@@ -141,6 +142,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="order-summary" element={<OrderSummary />} />
+        <Route path="*" element={<NoMatch />} />
       </Routes>
     </div>
   );
