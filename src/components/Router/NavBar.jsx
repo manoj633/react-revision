@@ -22,6 +22,9 @@ export const NavBar = () => {
       <NavLink style={enableActiveLink} to="/users">
         Users
       </NavLink>
+      <NavLink style={enableActiveLink} to="/profile">
+        Profile
+      </NavLink>
     </nav>
   );
 };
