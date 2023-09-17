@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import { useAuth } from "./auth";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export const Login = () => {
   const [username, setUsername] = useState(null);
   const auth = useAuth();
   const navigate = useNavigate();
+  const location = useLocation();
+  const redirectTo = location.state?.path || "/";
 
   const loginHandler = () => {
     auth.login(username);
-    navigate("/", { replace: true });
+    navigate(redirectTo, { replace: true });
   };
 
   return (
