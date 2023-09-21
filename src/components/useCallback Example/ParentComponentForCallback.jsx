@@ -16,7 +16,7 @@ function ParentComponentForCallback() {
   }, [salary]);
   return (
     <>
-      <Title>useCallback hook</Title>
+      <Title>useCallback hook - check console</Title>
       <Count text={"Age"} count={age} />
       <Button handleClick={incrementAge}>Increment age</Button>
       <Count text={"Salary"} count={salary} />
