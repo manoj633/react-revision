@@ -59,6 +59,7 @@ import CounterWithUseReducerAndPayload from "./components/useReducer Example/Cou
 import ComponentA from "./components/useReducer Example/useReducer with useContext/ComponentA";
 import ComponentB from "./components/useReducer Example/useReducer with useContext/ComponentB";
 import ComponentD from "./components/useReducer Example/useReducer with useContext/ComponentD";
+import DisplayPost from "./components/useReducer Example/useReducer with data fetching/DisplayPost";
 
 const LazyAbout = React.lazy(() => import("./components/Router/About"));
 
@@ -214,14 +215,16 @@ function App() {
       {/* <CounterWithUseReducerAndPayload /> */}
 
       {/* useReducer with useContext */}
-      <CountContext.Provider
+      {/* <CountContext.Provider
         value={{ countState: count, countDispatch: dispatch }}
       >
         <div>Count - {count}</div>
         <ComponentA />
         <ComponentB />
         <ComponentD />
-      </CountContext.Provider>
+      </CountContext.Provider> */}
+
+      <DisplayPost />
     </div>
   );
 }
