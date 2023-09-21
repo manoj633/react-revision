@@ -55,6 +55,7 @@ import { RequireAuth } from "./components/Router/Authentication and protected ro
 import { Login } from "./components/Router/Authentication and protected routes/Login";
 import { AuthProvider } from "./components/Router/Authentication and protected routes/auth";
 import CounterWithReducer from "./components/useReducer Example/CounterWithReducer";
+import CounterWithUseReducerAndPayload from "./components/useReducer Example/CounterWithUseReducerAndPayload";
 
 const LazyAbout = React.lazy(() => import("./components/Router/About"));
 
@@ -187,7 +188,8 @@ function App() {
       </AuthProvider> */}
 
       {/* useReducer Examples */}
-      <CounterWithReducer />
+      {/* <CounterWithReducer /> */}
+      <CounterWithUseReducerAndPayload />
     </div>
   );
 }
