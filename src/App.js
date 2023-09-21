@@ -62,6 +62,10 @@ import ComponentD from "./components/useReducer Example/useReducer with useConte
 import DisplayPost from "./components/useReducer Example/useReducer with data fetching/DisplayPost";
 import ParentComponentForCallback from "./components/useCallback Example/ParentComponentForCallback";
 import CounterForMemo from "./components/useMemo Example/CounterForMemo";
+// import ErrorBoundary from "./components/Error boundary/Example1/ErrorBoundary";
+import MyComponent from "./components/Error boundary/Example1/MyComponent";
+import Hero from "./components/Error boundary/Exmaple2 - recomended/Hero";
+import ErrorBoundary from "./components/Error boundary/Exmaple2 - recomended/ErrorBoundary";
 
 const LazyAbout = React.lazy(() => import("./components/Router/About"));
 
@@ -233,7 +237,21 @@ function App() {
       {/* <ParentComponentForCallback /> */}
 
       {/* useMemo Example */}
-      <CounterForMemo />
+      {/* <CounterForMemo /> */}
+
+      {/* ErrorBoundary Example */}
+      {/* Functional component - not working */}
+      {/* <ErrorBoundary>
+        <MyComponent />
+      </ErrorBoundary> */}
+
+      {/* Class component - working example */}
+      <ErrorBoundary>
+        <Hero heroName={"batman"} />
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <Hero heroName={"joker"} />
+      </ErrorBoundary>
     </div>
   );
 }
