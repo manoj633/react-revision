@@ -54,6 +54,7 @@ import { Profile } from "./components/Router/Authentication and protected routes
 import { RequireAuth } from "./components/Router/Authentication and protected routes/RequireAuth";
 import { Login } from "./components/Router/Authentication and protected routes/Login";
 import { AuthProvider } from "./components/Router/Authentication and protected routes/auth";
+import CounterWithReducer from "./components/useReducer Example/CounterWithReducer";
 
 const LazyAbout = React.lazy(() => import("./components/Router/About"));
 
@@ -149,7 +150,7 @@ function App() {
       {/* <ResetForm /> */}
 
       {/* React Router */}
-      <AuthProvider>
+      {/* <AuthProvider>
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -171,9 +172,9 @@ function App() {
             <Route path=":userId" element={<UserDetails />} />
             <Route path="admin" element={<Admin />} />
           </Route>
-          <Route path="login" element={<Login />} />
-          {/* Protected route */}
-          <Route
+          <Route path="login" element={<Login />} /> */}
+      {/* Protected route */}
+      {/* <Route
             path="profile"
             element={
               <RequireAuth>
@@ -183,7 +184,10 @@ function App() {
           />
           <Route path="*" element={<NoMatch />} />
         </Routes>
-      </AuthProvider>
+      </AuthProvider> */}
+
+      {/* useReducer Examples */}
+      <CounterWithReducer />
     </div>
   );
 }
