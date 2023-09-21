@@ -61,6 +61,7 @@ import ComponentB from "./components/useReducer Example/useReducer with useConte
 import ComponentD from "./components/useReducer Example/useReducer with useContext/ComponentD";
 import DisplayPost from "./components/useReducer Example/useReducer with data fetching/DisplayPost";
 import ParentComponentForCallback from "./components/useCallback Example/ParentComponentForCallback";
+import CounterForMemo from "./components/useMemo Example/CounterForMemo";
 
 const LazyAbout = React.lazy(() => import("./components/Router/About"));
 
@@ -229,7 +230,10 @@ function App() {
       {/* <DisplayPost /> */}
 
       {/* useCallback exmaple */}
-      <ParentComponentForCallback />
+      {/* <ParentComponentForCallback /> */}
+
+      {/* useMemo Example */}
+      <CounterForMemo />
     </div>
   );
 }
