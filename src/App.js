@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useReducer, useRef } from "react";
 import ParentComponent from "./components/propsBasics/Parent";
 import DefaultProps from "./components/propsBasics/DefaultProps";
 import CounterComponent from "./components/useState hook/Counter";
@@ -56,8 +56,28 @@ import { Login } from "./components/Router/Authentication and protected routes/L
 import { AuthProvider } from "./components/Router/Authentication and protected routes/auth";
 import CounterWithReducer from "./components/useReducer Example/CounterWithReducer";
 import CounterWithUseReducerAndPayload from "./components/useReducer Example/CounterWithUseReducerAndPayload";
+import ComponentA from "./components/useReducer Example/useReducer with useContext/ComponentA";
+import ComponentB from "./components/useReducer Example/useReducer with useContext/ComponentB";
+import ComponentD from "./components/useReducer Example/useReducer with useContext/ComponentD";
 
 const LazyAbout = React.lazy(() => import("./components/Router/About"));
+
+const initalState = 0;
+
+const reducer = (state, action) => {
+  switch (action) {
+    case "increment":
+      return state + 1;
+    case "decrement":
+      return state - 1;
+    case "reset":
+      return initalState;
+    default:
+      return state;
+  }
+};
+
+export const CountContext = React.createContext({});
 
 function App() {
   const inputRef = useRef(null);
@@ -72,6 +92,8 @@ function App() {
       childRef.current.style.backgroundColor = "blue";
     }
   }
+
+  const [count, dispatch] = useReducer(reducer, initalState);
 
   return (
     <div className="App">
@@ -189,7 +211,17 @@ function App() {
 
       {/* useReducer Examples */}
       {/* <CounterWithReducer /> */}
-      <CounterWithUseReducerAndPayload />
+      {/* <CounterWithUseReducerAndPayload /> */}
+
+      {/* useReducer with useContext */}
+      <CountContext.Provider
+        value={{ countState: count, countDispatch: dispatch }}
+      >
+        <div>Count - {count}</div>
+        <ComponentA />
+        <ComponentB />
+        <ComponentD />
+      </CountContext.Provider>
     </div>
   );
 }
